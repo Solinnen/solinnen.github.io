@@ -60,6 +60,7 @@ git add -A
 git commit -am "Initial Commit"
 git branch -D main
 git branch -m main
+git prune -v
 git push -f origin main
 ```
 
@@ -70,5 +71,6 @@ git add -A
 git commit -am "Initial Commit"
 git branch -D master
 git branch -m master
+git prune -v
 git push -f origin master
 ```
