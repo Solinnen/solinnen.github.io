@@ -1,0 +1,136 @@
+{{ define "body" }}
+<div class="info">
+  <p>I am a full-stack software engineer specializing in backend development. I create complete projects from scratch. You can find featured examples of my work below.</p>
+
+  <p class="list narrow"><b>Skills:</b>
+    <i>Python</i>
+    <i>Java</i>
+    <i>C/C++</i>
+    <i>Visual Basic</i>
+    <i>Full-stack Web</i>
+    <i>SQL & NoSQL</i>
+    <i>Telegram grandmaster</i>
+    <i>Machine learning</i>
+    <i>Data Analysis</i>
+    <i>Cryptography</i>
+    <i>Cybersecurity</i>
+    <i>OSINT</i>
+  </p>
+  <p class="list"><b>Platforms, frameworks & tools:</b>
+    <i>Git</i>
+    <i>Linux</i>
+    <i>SQL</i>
+    <i>MongoDB</i>
+    <i>Redis</i>
+    <i>PHP</i>
+    <i>Flask</i>
+    <i>Django Framework</i>
+    <i>Hugo</i>
+    <i>IPFS</i>
+    <i>OrbitDB</i>
+    <i>Qt</i>
+    <i>Keras</i>
+    <i>Telegram API</i>
+    <i>asyncio</i>
+  </p>
+  <p>I am open to new ideas and incoming proposals. <a href="https://t.me/Solinnen">Say hello</a>, or keep scrolling.</p>
+</div>
+
+<div class="projects">
+  <h2>Featured projects</h2>
+  <div class="items">
+    <a class="item" href="https://gitlab.com/SolinnenHub">
+      <div class="image"><img src="images/foundation.webp"></div>
+      <div class="right">
+        <div class="title">Solinnen Hub</div>
+        <div class="desc">All my projects put together</div>
+      </div>
+    </a>
+    <a class="item" href="https://tulpawikia.github.io/">
+      <div class="image"><img src="images/tulpawikia.webp"></div>
+      <div class="right">
+        <div class="title">TulpaWikia</div>
+        <div class="desc">One of the largest portals dedicated to tulpamancy</div>
+      </div>
+    </a>
+    <a class="item" href="https://ptde.gitlab.io/">
+      <div class="image"><img style="border-radius: 0%;" src="images/ptde.webp"></div>
+      <div class="right">
+        <div class="title">Minecraft: Prepare To Die Edition</div>
+        <div class="desc">Minecraft server inspired by Dark Souls game</div>
+      </div>
+    </a>
+    <a class="item" href="https://gitlab.com/SolinnenHub/callobserver/server">
+      <div class="image"><img src="images/callobserver.webp"></div>
+      <div class="right">
+        <div class="title">CallObserver CRM</div>
+        <div class="desc">Log calls between customers and employees in your organization</div>
+      </div>
+    </a>
+    <a class="item" href="https://gitlab.com/SolinnenHub/telegram/animate_bot/">
+      <div class="image"><img src="images/animate.webp"></div>
+      <div class="right">
+        <div class="title">Animate image bot</div>
+        <div class="desc">The bot will help you animate your Telegram profile picture</div>
+      </div>
+    </a>
+    <a class="item" href="https://gitlab.com/SolinnenHub/telegram/HalfLifeIRL_bot">
+      <div class="image"><img src="images/halflife.webp"></div>
+      <div class="right">
+        <div class="title">HalfLifeIRL bot</div>
+        <div class="desc">Telegram bot that can turn reality into Half-Life</div>
+      </div>
+    </a>
+    <a class="item" href="https://gitlab.com/SolinnenHub/flask/reversi-web">
+      <div class="image"><img style="border-radius: 20%;" src="images/reversi.webp"></div>
+      <div class="right">
+        <div class="title">Reversi Game</div>
+        <div class="desc">Web interface for multiplayer Reversi game</div>
+      </div>
+    </a>
+    <a class="item" href="https://gitlab.com/SolinnenHub/telegram/shell-bot">
+      <div class="image"><img src="images/shell.webp"></div>
+      <div class="right">
+        <div class="title">Shell bot</div>
+        <div class="desc">Telegram bot for remote system control</div>
+      </div>
+    </a>
+  </div>
+
+  <p>Check out my other open source projects like web-apps, desktop apps, Java plugins, math, algorithms, cryptography, Python modules, notes, code snippets, archived stuff and more: <a href="https://gitlab.com/SolinnenHub">Solinnen Hub</a>.</p>
+</div>
+
+<div class="blog" id="blog">
+  <h2>Blog</h2>
+  <div class="articles">
+    {{ range where .Paginator.Pages "Type" "!=" "page" }}
+      <a class="item" href="{{ .Permalink }}">
+        <div class="title">{{ .Title }}</div>
+        <div class="summary">
+          {{ .Description }}
+        </div>
+        <div class="meta">
+          <div class="publish-date">
+            <span>{{ .PublishDate.Format "Jan 2, 2006" }}</span>
+          </div>
+          <div class="reading-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i><span>{{ .ReadingTime }} min read</span>
+          </div>
+        </div>
+      </a>
+    {{ end }}
+  </div>
+</div>
+
+<div class="items-flow donate" id="donate">
+  <h2>Donate</h2>
+  <div class="item"><p>BTC</p><input type="text" class="addr" onClick="this.select();" value="bc1qkysqcg840fcclw9ct5cc7yv5djg0jd4zr3wzf6" readonly></input></div>
+  <div class="item hide"><p>LTC</p><input type="text" class="addr" onClick="this.select();" value="LNETeGjV4FKS7bE4uPbkYC8ZuYqKt5BeK6" readonly></input></div>
+  <div class="item"><p>ETH</p><input type="text" class="addr" onClick="this.select();" value="0xcb13F11752bc2675Dbfe0392c2eb512FF6Bad82b" readonly></input></div>
+  <div class="item hide"><p>USDT</p><input type="text" class="addr" onClick="this.select();" value="0xcb13F11752bc2675Dbfe0392c2eb512FF6Bad82b" readonly></input></div>
+  <div class="item"><p>Monero XMR</p><input type="text" class="addr" onClick="this.select();" value="47N4mb5g7DXSLJ7Y21NJV1QHqoiSJML3s6Q9nMJUtKTec9CEp2QN47PG4JoKv3mHG5cBT4KMoE8QQF2Mv2xMMdb63gmEWJj" readonly></input></div>
+  <div class="item"><p>BUSD (BEP2, BNB network)</p><input type="text" class="addr" onClick="this.select();" value="bnb1x0pp439x0d93874ph5750ezcres0e9e3hwd6sk" readonly></input></div>
+  <div class="item hide"><p>BNB (BEP20, BSC network)</p><input type="text" class="addr" onClick="this.select();" value="0xcb13F11752bc2675Dbfe0392c2eb512FF6Bad82b" readonly></input></div>
+  <div class="item hide"><p>Terra USD (UST)</p><input type="text" class="addr" onClick="this.select();" value="terra1a3k7n908a5fh70g0urzyqd0khuc9g99uesc7dj" readonly></input></div>
+</div>
+{{ end }}

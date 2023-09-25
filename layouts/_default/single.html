@@ -1,0 +1,24 @@
+{{ define "body" }}
+
+  <div class="article">
+    <div class="title">
+
+      <div class="meta">
+        <div class="publish-date">
+          <span>{{ .PublishDate.Format "Jan 2, 2006" }}</span>
+        </div>
+        <div class="reading-time">
+          <i class="fa fa-clock-o" aria-hidden="true"></i><span>{{ .ReadingTime }} min read</span>
+        </div>
+      </div>
+
+       <h2 class="page-title">{{ .Title }}</h2>
+
+    </div>
+
+    {{ .Content }}
+
+    <div class="backlink"><a href="/#blog">Back to the blog section</a></div>
+  </div>
+
+{{ end }}
