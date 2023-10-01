@@ -13,7 +13,7 @@ draft: true
 
 - [myth.rip](https://myth.rip/) / Will find passwords, names, emails and more. Accepts phone, email, username, IP address, password and username.
 
-- [sherlock](https://github.com/sherlock-project/sherlock) / Hunt down social media accounts by username across social networks.
+- [Maigret](https://github.com/soxoj/maigret) / Maigret collects a dossier on a person by username only, checking for accounts on a huge number of sites and gathering all the available information from web pages.
 
 - [whatsmyname.app](https://whatsmyname.app/) / Search username on 270+ platforms.
 
@@ -25,7 +25,9 @@ draft: true
 
 - [Marple](https://github.com/soxoj/marple) / Collect links to profiles by username through 10+ search engines.
 
-- [InstantUsername](https://instantusername.com/#/) / Checks username availability for more than 100 social media sites.
+- [InstantUsername](https://instantusername.com/) / Checks username availability for more than 100 social media sites.
+
+- [Epieos](https://epieos.com/) / Will find Google ID, provide links to your profile in Google maps, albums and calendar, find which sites your email are linked to. Recommended to use free account.
 
 - [Have I been pwned?](https://haveibeenpwned.com/) / Allows to check whether personal data has been compromised by data breaches.
 
