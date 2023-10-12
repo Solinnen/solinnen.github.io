@@ -59,6 +59,12 @@ svg {
 	z-index: -1;
 	opacity: 0.4;
 }
+
+.quote {
+	opacity: 0.5;
+	font-size: calc(var(--globalFontSize) - 2px);
+}
+
 .container {
 	max-width: 1050px;
 	margin: 5em auto 0 auto;
