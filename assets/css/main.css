@@ -1,7 +1,7 @@
 :root {
-	--colorText: #D4E2E9;
-	--colorTextOpaque: rgba(212, 226, 233, 0.28);
-	--colorTextLessOpaque: rgba(212, 226, 233, 0.8);
+	--colorText: rgb(221, 232, 238);
+	--colorTextOpaque: rgba(221, 232, 238, 0.28);
+	--colorTextLessOpaque: rgba(221, 232, 238, 0.8);
 	--colorBackgroundOpaque: rgba(24, 36, 52, 0.4);
 	--colorBackgroundCodeRGB: #182434;
 	--roundness: 6px;
@@ -430,7 +430,7 @@ svg {
 }
 .article .highlight > div {
 	border-radius: var(--roundness);
-	background: var(--colorBackgroundOpaque) !important;
+	background: rgba(0, 0, 0, 0) !important;
 }
 .article .highlight > div pre {
 	--pad: 0.5em;
@@ -438,7 +438,7 @@ svg {
 	max-width: calc(100% - var(--pad) * 2);
 	width: calc(100% - var(--pad) * 2);
 	border-radius: var(--roundness);
-	background: var(--colorBackgroundOpaque) !important;
+	background: rgba(0, 0, 0, 0) !important;
 }
 .article .highlight > pre {
 	--pad: 1em;
@@ -446,7 +446,7 @@ svg {
 	max-width: calc(100% - var(--pad) * 2);
 	width: calc(100% - var(--pad) * 2);
 	border-radius: var(--roundness);
-	background: var(--colorBackgroundOpaque) !important;
+	background: rgba(0, 0, 0, 0) !important;
 }
 .article code {
 	font-size: calc(var(--globalFontSize) - 4px);
