@@ -1,11 +1,13 @@
 :root {
-	--colorText: #403532;
-	--colorBackgroundOpaque: rgba(226, 218, 218, 0.0000001);
-	--colorBackgroundRGB: #E2DADA;
-	--colorBackgroundCodeRGB: #EEE8E8;
+	--colorText: #D4E2E9;
+	--colorTextOpaque: rgba(212, 226, 233, 0.28);
+	--colorTextLessOpaque: rgba(212, 226, 233, 0.8);
+	--colorBackgroundOpaque: rgba(24, 36, 52, 0.4);
+	--colorBackgroundCodeRGB: #182434;
 	--roundness: 6px;
 	--globalFontSize: 21px;
 	--pagePad: 2em;
+	--verticalItemsGap: 1.2em;
 }
 
 html, body {
@@ -15,6 +17,9 @@ html, body {
 html {
 	display: flex;
 }
+::selection {
+  background-color: var(--colorTextOpaque);
+}
 body {
 	width: 100vw;
 	display: block;
@@ -22,7 +27,6 @@ body {
 	line-height: 1.3;
 	font-size: var(--globalFontSize);
 	color: var(--colorText);
-	background-color: var(--colorBackgroundOpaque);
 	font-family:'Barlow', sans-serif;
 	font-display: swap;
 }
@@ -39,7 +43,7 @@ p.list {
 p.list > i {
 	display: inline-block;
 	font-style: normal;
-	background-color: var(--colorBackgroundCodeRGB);
+	background-color: var(--colorBackgroundOpaque);
 	border-radius: var(--roundness);
 	padding: 0 4px;
 	margin: 2px 0;
@@ -156,7 +160,7 @@ svg {
 	flex-grow: 10;
 	cursor: pointer;
 	box-shadow: 0 3px 6px -4px black;
-	background-color: var(--colorBackgroundRGB);
+	background-color: var(--colorBackgroundOpaque);
 }
 .projects .item .image {
 	display: flex;
@@ -273,11 +277,11 @@ svg {
 	margin: 0;
 	padding-right: 8%;
 }
-.hoverable {
-	transition: box-shadow 0.12s ease-in;
+.lnk, p > a {
+	transition: text-shadow 0.12s ease-in;
 }
-.hoverable:hover {
-	box-shadow: 0 3px 6px -4px black;
+.lnk:hover, p > a:hover {
+	text-shadow: 0px 0px 3px var(--colorTextLessOpaque);
 }
 
 
@@ -312,7 +316,7 @@ svg {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	border-bottom: .0625rem solid var(--colorBackgroundCodeRGB);
+	border-bottom: .0625rem solid var(--colorBackgroundOpaque);
 	margin-bottom: 0.5em;
 }
 .items-flow .item .name {
@@ -333,7 +337,7 @@ svg {
 	padding-right: 0.7em;
 }
 .donate input {
-	background-color: var(--colorBackgroundCodeRGB);
+	background-color: var(--colorBackgroundOpaque);
 	border-radius: var(--roundness);
 	padding: 0.8em;
 	font-style: normal;
@@ -373,22 +377,20 @@ svg {
 	align-items: center;
 	justify-content: center;
 	margin-bottom: 3em;
-	gap: 1.2em;
-    flex-direction: column;
+	gap: var(--verticalItemsGap);
+  flex-direction: column;
 }
 .articles .item {
 	flex-basis: 10%;
 	overflow: hidden;
 	border-radius: var(--roundness);
 	box-shadow: 0 3px 6px -4px black;
-	background-color: var(--colorBackgroundRGB);
+	background-color: var(--colorBackgroundOpaque);
 	cursor: pointer;
 	--pad: 14px;
 	padding: 18px var(--pad);
 	max-width: calc(100% - var(--pad) * 2);
     width: calc(100% - var(--pad) * 2);
-
-	border-bottom: 1px solid var(--colorText);
 }
 .articles a {
 	text-decoration: none;
@@ -420,7 +422,7 @@ svg {
 }
 .article .highlight {
 	border-radius: var(--roundness);
-	background: var(--colorBackgroundCodeRGB) !important;
+	background: var(--colorBackgroundOpaque) !important;
 	overflow-y: auto;
 }
 .article .highlight table {
@@ -428,7 +430,7 @@ svg {
 }
 .article .highlight > div {
 	border-radius: var(--roundness);
-	background: var(--colorBackgroundCodeRGB) !important;
+	background: var(--colorBackgroundOpaque) !important;
 }
 .article .highlight > div pre {
 	--pad: 0.5em;
@@ -436,7 +438,7 @@ svg {
 	max-width: calc(100% - var(--pad) * 2);
 	width: calc(100% - var(--pad) * 2);
 	border-radius: var(--roundness);
-	background: var(--colorBackgroundCodeRGB) !important;
+	background: var(--colorBackgroundOpaque) !important;
 }
 .article .highlight > pre {
 	--pad: 1em;
@@ -444,7 +446,7 @@ svg {
 	max-width: calc(100% - var(--pad) * 2);
 	width: calc(100% - var(--pad) * 2);
 	border-radius: var(--roundness);
-	background: var(--colorBackgroundCodeRGB) !important;
+	background: var(--colorBackgroundOpaque) !important;
 }
 .article code {
 	font-size: calc(var(--globalFontSize) - 4px);
@@ -505,15 +507,12 @@ svg {
 	h2 {
 		margin: 0 0 1em 0;
 	}
-	.header .buttons-row .hoverable:hover {
-		box-shadow: none;
-	}
 	.projects {
 		padding: 0 2em;
 	}
 	.projects .items {
-		gap: 1.2em;
 		flex-direction: column;
+		gap: var(--verticalItemsGap);
 	}
 	.projects .item {
 		max-width: 100%;
@@ -595,6 +594,9 @@ svg {
 	}
 }
 @media only screen and (max-width: 470px) {
+	:root {
+		--verticalItemsGap: 0.8em;
+	}
 	.header {
 		margin-bottom: 2.5em;
 		padding: 0;
@@ -676,7 +678,6 @@ svg {
 		--globalFontSize: 19px;
 	}
 	.projects .items {
-		gap: 1.6em;
 		flex-direction: row;
 	}
 	.header {
