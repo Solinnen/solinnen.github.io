@@ -1,7 +1,6 @@
 baseURL = 'https://solinnen.github.io'
 languageCode = 'en-US'
 title = 'Beronika Solinnen'
-description = 'I am a full-stack software engineer specializing in backend development.'
 summaryLength = 20
 
 [markup.highlight]
@@ -9,5 +8,6 @@ summaryLength = 20
 
 [params]
   telegramURL = 'https://t.me/Solinnen'
+  description = 'I am a full-stack software engineer specializing in backend development.'
 
 disableHugoGeneratorInject = true
