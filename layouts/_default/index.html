@@ -138,3 +138,60 @@
   <div class="item hide"><p>Terra USD (UST)</p><input type="text" class="addr" onClick="this.select();" value="terra1a3k7n908a5fh70g0urzyqd0khuc9g99uesc7dj" readonly></input></div>
 </div>
 {{ end }}
+
+{{ define "structured" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "{{ .Site.Params.staticURL }}",
+      "url": "{{ .Site.Params.staticURL }}",
+      "name": "Blog - Solinnen",
+      "isPartOf": {
+        "@id": "{{ .Site.Params.staticURL }}#website"
+      },
+      "datePublished": "2018-11-23T11:01:01+00:00",
+      "dateModified": "2023-10-13T11:01:01+00:00",
+      "breadcrumb": {
+        "@id": "{{ .Site.Params.staticURL }}#breadcrumb"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "{{ .Site.Params.staticURL }}"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ .Site.Params.staticURL }}#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beronika Solinnen",
+          "item": "{{ .Site.Params.staticURL }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ .Site.Params.staticURL }}#website",
+      "url": "{{ .Site.Params.staticURL }}",
+      "name": "Beronika Solinnen",
+      "description": "Full-stack software engineer specializing in backend development."
+    }
+  ]
+}
+</script>
+{{ end }}
