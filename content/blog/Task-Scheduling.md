@@ -118,7 +118,7 @@ nano /etc/systemd/system/rc-local.service
 
 With content:
 
-{{< highlight txt "lineNos=true" >}}
+{{< highlight service "lineNos=true" >}}
 [Unit]
  Description=/etc/rc.local Compatibility
  ConditionPathExists=/etc/rc.local

@@ -4,7 +4,7 @@ title = 'Beronika Solinnen'
 summaryLength = 20
 
 [markup.highlight]
-  style = 'autumn'
+  style = 'native'
 
 [params]
   staticURL = 'https://solinnen.github.io'
