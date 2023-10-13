@@ -1,5 +1,4 @@
 {{ define "body" }}
-
   <div class="article">
     <div class="title">
 
@@ -20,5 +19,20 @@
 
     <div class="backlink lnk"><a href="/#blog">Back to the blog section</a></div>
   </div>
+{{ end }}
 
+{{ define "structured" }}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ .Title }}",
+    "datePublished": "{{ .PublishDate }}T08:00:00+08:00",
+    "author": {
+      "@type": "Person",
+      "name": "Beronika Solinnen",
+      "url": "{{ .Site.Params.staticURL }}"
+    }
+  }
+</script>
 {{ end }}

@@ -7,6 +7,7 @@ summaryLength = 20
   style = 'autumn'
 
 [params]
+  staticURL = 'https://solinnen.github.io'
   telegramURL = 'https://t.me/Solinnen'
   description = 'Full-stack software engineer specializing in backend development.'
 
