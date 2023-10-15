@@ -1,7 +1,6 @@
 baseURL = 'https://solinnen.github.io'
 languageCode = 'en-US'
 title = 'Beronika Solinnen'
-summaryLength = 20
 
 [markup.highlight]
   style = 'native'
@@ -12,3 +11,7 @@ summaryLength = 20
   description = 'Full-stack software engineer specializing in backend development.'
 
 disableHugoGeneratorInject = true
+
+[taxonomies]
+  tag = ""
+  category = ""
