@@ -450,8 +450,15 @@ svg {
 .article .title {
 	margin: 0 0 2em;
 }
-.article .title h2 {
+.article .title .page-title {
 	margin: 0;
+	font-size: 1.5em;
+	text-decoration: none;
+	font-weight: bold;
+	transition: none;
+}
+.article .title .page-title:hover {
+	text-shadow: none;
 }
 .article h2 {
 	margin: 1em 0;
