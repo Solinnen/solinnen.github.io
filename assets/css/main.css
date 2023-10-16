@@ -68,10 +68,10 @@ svg {
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?x9tjjq');
-  src:  url('../fonts/icomoon.eot?x9tjjq#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?x9tjjq') format('truetype'),
-    url('../fonts/icomoon.woff?x9tjjq') format('woff');
+  src:  url('../fonts/icomoon.eot?265zht');
+  src:  url('../fonts/icomoon.eot?265zht#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?265zht') format('truetype'),
+    url('../fonts/icomoon.woff?265zht') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -90,6 +90,9 @@ svg {
 .icon-cryptohack:before {
   content: "\e900";
 }
+.icon-clock-o:before {
+  content: "\e904";
+}
 .icon-envelope:before {
   content: "\e902";
 }
@@ -102,6 +105,7 @@ svg {
 .icon-github:before {
   content: "\eab0";
 }
+
 
 
 
