@@ -29,7 +29,7 @@ conda info --envs
 
 Create new environment:
 ```bash
-conda create --name <env_name> python=3.10
+conda create --name <env_name> python=3.12
 ```
 
 Or:
@@ -49,7 +49,7 @@ conda deactivate
 
 Remove environment:
 ```bash
-conda remove -n <env_name> --all
+conda remove --all -n <env_name>
 ```
 
 Clear package cache:

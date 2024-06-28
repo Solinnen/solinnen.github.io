@@ -468,6 +468,8 @@ svg {
 	border-radius: var(--roundness);
 	background: var(--colorBackgroundOpaque) !important;
 	overflow-y: auto;
+	margin-bottom: 1em;
+	font-size: calc(var(--globalFontSize) - 4px);
 }
 .article .highlight table {
 	padding: 0 1em 0 0.5em !important;
@@ -492,10 +494,7 @@ svg {
 	border-radius: var(--roundness);
 	background: rgba(0, 0, 0, 0) !important;
 }
-.article code {
-	font-size: calc(var(--globalFontSize) - 4px);
-}
-.article .highlight code {
+.article .highlight code > * > * {
 	padding-right: 1em;
 }
 .article ol, .article ul {
