@@ -75,7 +75,7 @@ htop
 
 ### Make sure that /swapfile is enabled after a restart:
 
-Create backup of /etc/fstab:
+Create backup of `/etc/fstab`:
 
 ```bash
 cp /etc/fstab /etc/fstab.bak

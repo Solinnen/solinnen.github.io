@@ -494,6 +494,9 @@ svg {
 	border-radius: var(--roundness);
 	background: rgba(0, 0, 0, 0) !important;
 }
+.article code {
+	font-size: calc(var(--globalFontSize) - 4px);
+}
 .article .highlight code > * > * {
 	padding-right: 1em;
 }
