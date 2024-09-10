@@ -7,6 +7,8 @@ draft: true
 
 I present the Cybersecurity course program. The course consists of six modules covering key topics in the field. It is designed for both beginners without in-depth technical knowledge and those who already have a basic understanding and want to deepen their knowledge.
 
+DMs are open: [t.me/Solinnen](https://t.me/Solinnen)
+
 ### I Computer Networks and Web Technologies (~11-14 lessons)
 
 - 1.1 Browser, network requests, page inspector.
