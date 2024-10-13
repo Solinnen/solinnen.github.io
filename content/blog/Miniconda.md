@@ -2,7 +2,6 @@
 title: "Miniconda guide"
 description: Miniconda is a tool for managing Python virtual environments. It allows each project to define its own set of dependencies...
 date: 2020-05-09
-draft: true
 ---
 
 Miniconda is a tool for managing Python virtual environments. It allows to define its own set of dependencies for each project (including the python version).

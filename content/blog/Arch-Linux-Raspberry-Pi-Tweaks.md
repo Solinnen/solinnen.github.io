@@ -2,7 +2,6 @@
 title: "Arch Linux on Raspberry Pi: post-install tweaks"
 description: My personal recommendations for installing Arch Linux on Raspberry Pi 3. Suitable for other platforms as well.
 date: 2020-05-11
-draft: true
 ---
 
 My personal recommendations for installing Arch Linux on Raspberry Pi 3. Suitable for other platforms as well.

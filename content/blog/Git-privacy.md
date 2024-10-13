@@ -2,7 +2,6 @@
 title: "How to clean a git history of unwanted data"
 description: What if you accidentally left your personal data in a Git repository?
 date: 2023-09-18
-draft: true
 ---
 
 Git is a version control system that allows you to describe the development of your project as a logical chain, keeping track of all changes. Imagine that you accidentally left personal data, tokens, passwords, etc. in your Git history. In this article I will tell you how to remove them.

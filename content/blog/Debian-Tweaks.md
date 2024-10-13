@@ -2,7 +2,6 @@
 title: "Debian: post-install tweaks"
 description: My personal recommendations for setting up Debian Stretch.
 date: 2020-05-10
-draft: true
 ---
 
 ### First steps:

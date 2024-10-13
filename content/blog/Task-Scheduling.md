@@ -2,7 +2,6 @@
 title: "Task scheduling with cron and rc.local"
 description: Some projects can only be run intermittently, which saves a lot of resources.
 date: 2020-11-26
-draft: true
 ---
 
 ### Cron

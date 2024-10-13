@@ -2,7 +2,6 @@
 title: "Course Program: Cyberecurity"
 description: Course program covering key topics in computer networks, cryptography, Linux, web security, and personal cybersecurity.
 date: 2024-09-10
-draft: true
 ---
 
 I present the Cybersecurity course program. The course consists of six modules covering key topics in the field. It is designed for both beginners without in-depth technical knowledge and those who already have a basic understanding and want to deepen their knowledge.

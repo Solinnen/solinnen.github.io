@@ -2,7 +2,6 @@
 title: "Development tips"
 description: My personal recommendations for installing Arch Linux on Raspberry Pi 3. Suitable for other platforms as well.
 date: 2020-05-10
-draft: true
 ---
 
 - Avoid memory leaks, use as little RAM as possible, keep your code clean. For example, Example: I created a script that has nothing but an infinite loop with `time.sleep()`. Together with the `tmux` session (discussed below), it occupies 12.2 megabytes of RAM, although this script can simply be turned off during inactivity, especially if the time interval is large enough. For example, more than 10 minutes.
