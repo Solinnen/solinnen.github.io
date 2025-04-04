@@ -2,16 +2,34 @@ baseURL = 'https://solinnen.github.io'
 languageCode = 'en-US'
 title = 'Beronika Solinnen'
 
-[markup.highlight]
-  style = 'native'
+[markup]
+  [markup.highlight]
+    style = 'native'
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
 
 [params]
   staticURL = 'https://solinnen.github.io'
   telegramURL = 'https://t.me/Solinnen'
   description = 'Full-stack software engineer specializing in backend development.'
+  math = true
 
 disableHugoGeneratorInject = true
 
 [taxonomies]
   tag = ""
   category = ""
+
+[sitemap]
+  changeFreq = 'daily'
+  filename = 'sitemap.xml'
+  priority = -1
+
+

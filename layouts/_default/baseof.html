@@ -3,6 +3,10 @@
   <head>
     {{- partial "head.html" . -}}
     {{- block "structured" . }}{{- end }}
+
+    {{ if .Param "math" }}
+      {{ partialCached "math.html" . }}
+    {{ end }}
   </head>
 
   <body>
@@ -16,7 +20,7 @@
       {{- partial "footer.html" . -}}
     </div>
 
-    {{ $style := resources.Get "/js/main.js" | minify }}
-    <script src="{{ $style.Permalink }}" async></script>
+    {{ $asset := resources.Get "/js/main.js" | minify }}
+    <script src="{{ $asset.Permalink }}" async></script>
   </body>
 </html>

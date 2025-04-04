@@ -31,8 +31,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-{{ $style := resources.Get "/css/main.css" | minify }}
-<link rel="stylesheet" href="{{ $style.Permalink }}">
+{{ $asset := resources.Get "/css/main.css" | minify }}
+<link rel="stylesheet" href="{{ $asset.Permalink }}">
 
 <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet"> 
 
