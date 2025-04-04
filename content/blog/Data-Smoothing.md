@@ -26,9 +26,9 @@ $$
 
 Generalized formula for a local window \( n \):
 
-\[
+$$
 X_t = \frac{\sum_{i=0}^{n-1} x_{t-i}}{n}
-\]
+$$
 
 While the SMA is easy to compute, it has a drawback: all points in the window are weighted equally, and older data has the same influence as newer data. This makes the SMA slow to react to sudden changes in the trend.
 
@@ -38,9 +38,9 @@ The **exponential moving average (EMA)** addresses this limitation by assigning 
 
 The EMA is defined recursively. For a time series \( x_t \), the EMA at time \( t \), denoted \( X_t \), is calculated as:
 
-\[
+$$
 X_t = \alpha \cdot x_t + (1 - \alpha) \cdot X_{t-1}
-\]
+$$
 
 Where:
 - \( x_t \) is the current data point,
@@ -55,9 +55,9 @@ To start the recursion, you need an initial value for \( X_0 \). A common choice
 #### Relation to Window Size
 The smoothing factor \( \alpha \) can be related to the window size \( n \) of an SMA using the formula:
 
-\[
+$$
 \alpha = \frac{2}{n + 1}
-\]
+$$
 
 For example, if you want the EMA to behave like an SMA with a 10-point window, you’d set \( \alpha = \frac{2}{10 + 1} = \frac{2}{11} \approx 0.18 \).
 
