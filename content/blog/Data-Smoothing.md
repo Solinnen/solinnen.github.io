@@ -18,7 +18,7 @@ Before diving into the EMA, let’s consider a simpler method: the **simple movi
 
 A filter, in its simplest form, is a mathematical algorithm for this "smoothing." The algorithm takes measured values of something as input and produces smoothed values as output. There are a vast number of such mechanisms, each with its own operating principle and area of application. For example, you can calculate the arithmetic mean over the last few measurements. In this case, the adjustable parameter of the filter is the so-called local window — the number of recent measurements used in the averaging to obtain the current value. For example, four:
 
-If you have a time series $ x_1, x_2, x_3, x_4 $, the SMA over a window of $ 4 $ points at time $ t $ is:
+If you have a time series $ x_1, x_2, \dots, x_n $, the SMA over a window of $ 4 $ points at time $ t $ is:
 
 $$
 X_t = \frac{x_t + x_{t-1} + x_{t-2} + x_{t-3}}{4}
