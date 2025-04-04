@@ -45,7 +45,7 @@ $$
 Where:
 - $ x_t $ is the current data point,
 - $ X_{t-1} $ is the previous EMA value,
-- $ \alpha $ (alpha) is the smoothing factor, a value between 0 and 1.
+- $ \alpha $ is the smoothing factor, a value between 0 and 1.
 
 The smoothing factor $ \alpha $ determines how much weight is given to the current observation versus the historical average. A higher $ \alpha $ (closer to 1) makes the EMA more responsive to new data, while a lower $ \alpha $ (closer to 0) makes it smoother and less reactive.
 
