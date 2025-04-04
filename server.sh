@@ -2,4 +2,4 @@
 
 rm -r public
 
-hugo server -D --bind 192.168.1.140 --baseURL http://192.168.1.140:8080 -p 8080
+hugo server -D --bind 127.0.0.1 --baseURL http://127.0.0.1:8080 -p 8080

@@ -1,5 +1,7 @@
-{{ if .Params.math }}
-  {{ partial "mathjax" . }}
+{{ define "mathjax" }}
+  {{ if .Params.math }}
+    {{- partial "mathjax" . -}}
+  {{ end }}
 {{ end }}
 
 {{ define "body" }}
