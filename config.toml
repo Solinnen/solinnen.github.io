@@ -14,8 +14,8 @@ title = 'Beronika Solinnen'
       [markup.goldmark.extensions.passthrough]
         enable = true
         [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)']]
+          inline = [['$', '$']]
+          block = [['$$', '$$']]
 
 [params]
   staticURL = 'https://solinnen.github.io'

@@ -18,13 +18,13 @@ Before diving into the EMA, let’s consider a simpler method: the **simple movi
 
 A filter, in its simplest form, is a mathematical algorithm for this "smoothing." The algorithm takes measured values of something as input and produces smoothed values as output. There are a vast number of such mechanisms, each with its own operating principle and area of application. For example, you can calculate the arithmetic mean over the last few measurements. In this case, the adjustable parameter of the filter is the so-called local window — the number of recent measurements used in the averaging to obtain the current value. For example, four:
 
-If you have a time series \( x_1, x_2, x_3, x_4 \), the SMA over a window of \( 4 \) points at time \( t \) is:
+If you have a time series $ x_1, x_2, x_3, x_4 $, the SMA over a window of $ 4 $ points at time $ t $ is:
 
 $$
 X_t = \frac{x_t + x_{t-1} + x_{t-2} + x_{t-3}}{4}
 $$
 
-Generalized formula for a local window \( n \):
+Generalized formula for a local window $ n $:
 
 $$
 X_t = \frac{\sum_{i=0}^{n-1} x_{t-i}}{n}
@@ -36,36 +36,36 @@ While the SMA is easy to compute, it has a drawback: all points in the window ar
 
 The **exponential moving average (EMA)** addresses this limitation by assigning exponentially decreasing weights to older data points. This means recent values have a stronger influence on the average, allowing the EMA to adapt more quickly to changes.
 
-The EMA is defined recursively. For a time series \( x_t \), the EMA at time \( t \), denoted \( X_t \), is calculated as:
+The EMA is defined recursively. For a time series $ x_t $, the EMA at time $ t $, denoted $ X_t $, is calculated as:
 
 $$
 X_t = \alpha \cdot x_t + (1 - \alpha) \cdot X_{t-1}
 $$
 
 Where:
-- \( x_t \) is the current data point,
-- \( X_{t-1} \) is the previous EMA value,
-- \( \alpha \) (alpha) is the smoothing factor, a value between 0 and 1.
+- $ x_t $ is the current data point,
+- $ X_{t-1} $ is the previous EMA value,
+- $ \alpha $ (alpha) is the smoothing factor, a value between 0 and 1.
 
-The smoothing factor \( \alpha \) determines how much weight is given to the current observation versus the historical average. A higher \( \alpha \) (closer to 1) makes the EMA more responsive to new data, while a lower \( \alpha \) (closer to 0) makes it smoother and less reactive.
+The smoothing factor $ \alpha $ determines how much weight is given to the current observation versus the historical average. A higher $ \alpha $ (closer to 1) makes the EMA more responsive to new data, while a lower $ \alpha $ (closer to 0) makes it smoother and less reactive.
 
 #### Initial Value
-To start the recursion, you need an initial value for \( X_0 \). A common choice is to set \( X_0 = x_1 \) (the first data point) or use the SMA over the first few points.
+To start the recursion, you need an initial value for $ X_0 $. A common choice is to set $ X_0 = x_1 $ (the first data point) or use the SMA over the first few points.
 
 #### Relation to Window Size
-The smoothing factor \( \alpha \) can be related to the window size \( n \) of an SMA using the formula:
+The smoothing factor $ \alpha $ can be related to the window size $ n $ of an SMA using the formula:
 
 $$
 \alpha = \frac{2}{n + 1}
 $$
 
-For example, if you want the EMA to behave like an SMA with a 10-point window, you’d set \( \alpha = \frac{2}{10 + 1} = \frac{2}{11} \approx 0.18 \).
+For example, if you want the EMA to behave like an SMA with a 10-point window, you’d set $ \alpha = \frac{2}{10 + 1} = \frac{2}{11} \approx 0.18 $.
 
 ### Advantages of EMA
 
 1. **Responsiveness**: The EMA reacts quickly to changes because it prioritizes recent data.
 2. **Simplicity**: It’s computationally efficient, requiring only the previous EMA value and the current data point.
-3. **Flexibility**: You can tune \( \alpha \) to balance smoothness and sensitivity.
+3. **Flexibility**: You can tune $ \alpha $ to balance smoothness and sensitivity.
 
 ### Applications
 
