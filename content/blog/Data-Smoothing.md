@@ -205,13 +205,13 @@ It’s time to get hands-on with EMA filtering. In the program below, the red li
         chart.data.datasets[1].data.push({ x: t, y: measuredValue });
         chart.data.datasets[2].data.push({ x: t, y: smoothedValue });
 
-        if (chart.data.datasets[0].data.length > 160) {
+        if (chart.data.datasets[0].data.length > 140) {
             chart.data.datasets[0].data.shift();
             chart.data.datasets[1].data.shift();
             chart.data.datasets[2].data.shift();
         }
 
-        chart.options.scales.x.min = Math.max(0, t - 160);
+        chart.options.scales.x.min = Math.max(0, t - 140);
         chart.options.scales.x.max = t;
 
         chart.update();
