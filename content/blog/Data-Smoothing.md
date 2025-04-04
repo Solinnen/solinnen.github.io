@@ -20,9 +20,9 @@ A filter, in its simplest form, is a mathematical algorithm for this "smoothing.
 
 If you have a time series \( x_1, x_2, x_3, x_4 \), the SMA over a window of \( 4 \) points at time \( t \) is:
 
-\[
+$$
 X_t = \frac{x_t + x_{t-1} + x_{t-2} + x_{t-3}}{4}
-\]
+$$
 
 Generalized formula for a local window \( n \):
 
