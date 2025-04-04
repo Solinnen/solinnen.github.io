@@ -2,6 +2,7 @@
 title: "Basics of Data Smoothing and Filtering: Exponential Moving Average"
 description: The article explains the exponential moving average (EMA).
 date: 2025-03-04
+math: true
 ---
 
 When working with data — whether it’s sensor readings, financial time series, or other measurements — we often encounter noise. Noise is random fluctuations that obscure the true signal we’re trying to analyze. To extract meaningful information, we use smoothing and filtering techniques. One of the simplest and most effective methods is the **exponential moving average (EMA)**. This article explains its fundamentals, how it works, and its practical applications.

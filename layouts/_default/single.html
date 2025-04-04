@@ -1,3 +1,7 @@
+{{ if .Params.math }}
+  {{ partial "mathjax" . }}
+{{ end }}
+
 {{ define "body" }}
   <div class="article">
     <div class="title">
