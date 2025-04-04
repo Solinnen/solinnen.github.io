@@ -19,7 +19,6 @@ title = 'Beronika Solinnen'
   staticURL = 'https://solinnen.github.io'
   telegramURL = 'https://t.me/Solinnen'
   description = 'Full-stack software engineer specializing in backend development.'
-  math = true
 
 disableHugoGeneratorInject = true
 

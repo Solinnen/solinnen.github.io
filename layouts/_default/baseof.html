@@ -4,9 +4,7 @@
     {{- partial "head.html" . -}}
     {{- block "structured" . }}{{- end }}
 
-    {{ if .Param "math" }}
-      {{ partialCached "math.html" . }}
-    {{ end }}
+    {{ partial "math.html" . }}
   </head>
 
   <body>
