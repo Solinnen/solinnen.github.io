@@ -43,8 +43,15 @@ SESSION=${PWD##*/} # tmux session name = directory name
 if ! [[ $(tmux ls | grep $SESSION) ]]; then
 	tmux new-session -d -s $SESSION
 
-	tmux send-keys 'conda activate ' $SESSION C-m # virtual environment name = tmux session name
+	tmux split-window -h
+
+	tmux select-pane -t 0
+	tmux send-keys 'conda activate ' $SESSION C-m
 	tmux send-keys 'python main.py' C-m
+
+	tmux select-pane -t 1
+	tmux send-keys 'conda activate ' $SESSION C-m
+	tmux send-keys 'python processor.py' C-m
 fi
 
 # if executed with the -d argument, runs in daemon mode
