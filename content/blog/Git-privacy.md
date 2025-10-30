@@ -34,9 +34,9 @@ Suitable when you have commits with unwanted email and author name.
 
 ```bash
 git filter-branch -f --env-filter "
-    GIT_AUTHOR_NAME='Beronika Solinnen'
+    GIT_AUTHOR_NAME='Solinnen'
     GIT_AUTHOR_EMAIL='solinnen@proton.me'
-    GIT_COMMITTER_NAME='Beronika Solinnen'
+    GIT_COMMITTER_NAME='Solinnen'
     GIT_COMMITTER_EMAIL='solinnen@proton.me'
   " HEAD
 ```
