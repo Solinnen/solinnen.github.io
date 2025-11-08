@@ -1,6 +1,6 @@
 baseURL = 'https://solinnen.github.io'
 languageCode = 'en-US'
-title = 'Beronika Solinnen'
+title = 'Veronika Solinnen'
 
 [markup]
   [markup.highlight]
