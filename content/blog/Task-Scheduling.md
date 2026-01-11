@@ -67,7 +67,7 @@ nano /etc/rc.local
 The template looks like this, paste:
 
 {{< highlight bash "lineNos=true" >}}
-#! /bin/bash
+#!/bin/bash
 ### BEGIN INIT INFO
 # Provides:          my-start-script
 # Required-Start:    \$local_fs \$syslog
